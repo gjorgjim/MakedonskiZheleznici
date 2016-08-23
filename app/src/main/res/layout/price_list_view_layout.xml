@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Велес - Скопје"
+        android:paddingTop="4dp"
+        style="@style/SecondaryTextStyle"
+        android:textColor="@color/colorTextPrimary"
+        android:id="@+id/relation"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="113,00"
+        android:id="@+id/onewayTextView"
+        android:layout_alignBaseline="@+id/relation"
+        style="@style/SecondaryTextStyle"
+        android:paddingRight="8dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="180,00"
+        android:paddingRight="16dp"
+        android:layout_alignBaseline="@+id/relation"
+        style="@style/SecondaryTextStyle"
+        android:id="@+id/twowaytextView"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/onewayTextView"
+        android:layout_toStartOf="@+id/onewayTextView" />
+
+</RelativeLayout>

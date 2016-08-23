@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Македонски Железници</string>
+    <string name="planTravelling">Планирај патување</string>
+    <string name="VozenRed">Возен Ред</string>
+    <string name="start">Почетна станица:</string>
+    <string name="planTravelBtn">Прикажи возни линии</string>
+    <string name="endStation">Последна станица:</string>
+
+        <string-array name="stations_array">
+            <item>Скопје</item>
+            <item>Велес</item>
+            <item>Битола</item>
+            <item>Прилеп</item>
+            <item>Кочани</item>
+            <item>Кичево</item>
+            <item>Рајко Жинзифов</item>
+            <item>Зелениково</item>
+        </string-array>
+
+</resources>

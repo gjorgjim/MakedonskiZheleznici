@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:paddingTop="100dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Наредни возни линии"
+        android:id="@+id/textViewNextTrains"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        style="@style/PrimaryTextStyle"
+        android:padding="8dp"/>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/listViewNextTrains"
+        android:layout_below="@+id/textViewNextTrains"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Возни линии во денот"
+            android:id="@+id/textViewAllTrains"
+            style="@style/PrimaryTextStyle"
+            android:padding="8dp"
+            android:layout_below="@+id/listViewNextTrains"
+            android:layout_centerHorizontal="true" />
+
+        <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/listViewAllTrains"
+            android:layout_below="@+id/textViewAllTrains"
+            android:layout_centerHorizontal="true" />
+
+    </RelativeLayout>
