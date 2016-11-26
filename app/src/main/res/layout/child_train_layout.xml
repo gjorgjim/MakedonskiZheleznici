@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingStart="32dp"
+    android:paddingEnd="32dp"
+    android:paddingTop="4dp"
+    android:paddingBottom="4dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:id="@+id/startingBasetext"
+        style="@style/SecondaryTextStyle"
+        android:text="Тргнува во: "/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/startingBasetext"
+        android:layout_toEndOf="@+id/startingBasetext"
+        style="@style/SecondaryTextStyle"
+        android:textStyle="bold"
+        android:id="@+id/startingHourTextView"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/startingBasetext"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/endingBaseText"
+        style="@style/SecondaryTextStyle"
+        android:text="Пристигнува во: "/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/endingBaseText"
+        android:layout_toEndOf="@+id/endingBaseText"
+        android:layout_alignBaseline="@+id/endingBaseText"
+        android:id="@+id/endingHourTextView"
+        style="@style/SecondaryTextStyle" />
+</RelativeLayout>

@@ -99,4 +99,13 @@ public class Data {
 
         return priceList;
     }
+
+    public static List<ParentTrain> getParentTrain() {
+        List<ParentTrain> list = new ArrayList<>();
+        list.add(new ParentTrain(new Station(null, "Велес"), new Station(null, "Скопје"), Data.getTrainList()));
+        list.add(new ParentTrain(new Station(null, "Скопје"), new Station(null, "Велес"), Data.getTrainList()));
+        list.add(new ParentTrain(new Station(null, "Скопје"), new Station(null, "Куманово"), Data.getTrainList()));
+
+        return list;
+    }
 }

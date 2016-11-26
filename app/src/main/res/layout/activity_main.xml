@@ -1,35 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="mk.com.mztransportad.makedonskizheleznici.MainActivity">
-
-    <include
-        android:id="@+id/tool_bar"
-        layout="@layout/toolbar">
-    </include>
-    <android.support.v4.view.ViewPager
+    <android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/drawer_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/tool_bar"
-        android:id="@+id/pager">
+        android:fitsSystemWindows="true"
+        tools:openDrawer="start"
+        tools:context="mk.com.mztransportad.makedonskizheleznici.MainActivity">
 
-        <android.support.v4.view.PagerTabStrip
+        <include
+            layout="@layout/app_bar_navigation"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/title"
-            android:background="@color/colorPrimary"
-            android:paddingBottom="4dp"
-            android:paddingTop="4dp"
-            android:layout_gravity="top"
-            style="@style/TextStyleScrollView">
+            android:layout_height="match_parent" />
 
-        </android.support.v4.view.PagerTabStrip>
+        <android.support.design.widget.NavigationView
+            android:id="@+id/nav_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:fitsSystemWindows="true"
+            style="@style/SecondaryTextStyle"
+            app:headerLayout="@layout/nav_header_navigation"
+            app:menu="@menu/activity_navigation_drawer" />
 
-    </android.support.v4.view.ViewPager>
+    </android.support.v4.widget.DrawerLayout>
 
-
-
-</RelativeLayout>

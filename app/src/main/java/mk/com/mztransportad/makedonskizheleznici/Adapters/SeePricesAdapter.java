@@ -51,9 +51,9 @@ public class SeePricesAdapter extends BaseAdapter {
         TextView relation = (TextView)view.findViewById(R.id.relation);
         TextView oneway = (TextView)view.findViewById(R.id.onewayTextView);
         TextView twoway = (TextView)view.findViewById(R.id.twowaytextView);
-        relation.setText(currPrice.getStart() + "-" + currPrice.getEnd());
-        oneway.setText(currPrice.getOneway() + ",00");
-        twoway.setText(currPrice.getTwoway() + ",00");
+        relation.setText(currPrice.getStart() + " - " + currPrice.getEnd());
+        oneway.setText(currPrice.getTwoway() + ",00");
+        twoway.setText(currPrice.getOneway() + ",00");
         return view;
     }
 }

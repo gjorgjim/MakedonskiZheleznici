@@ -137,23 +137,31 @@ public class PlanTravelFragment extends Fragment {
                         if (nextTrains.isChecked() && allTrains.isChecked()) {
                             if (planList.isEmpty()) {
                                 nextTrainsTextView.setText("Нема возни линии.");
+                                nextTrainsTextView.setVisibility(TextView.VISIBLE);
                                 nextTrainsListView.setVisibility(ListView.GONE);
                                 allTrainsListView.setVisibility(ListView.GONE);
                                 allTrainsTextView.setVisibility(TextView.GONE);
                             } else {
                                 if (nextTrainlist.isEmpty()) {
                                     nextTrainsTextView.setText("Нема наредни возни линии.");
+                                    nextTrainsTextView.setVisibility(TextView.VISIBLE);
                                     nextTrainsListView.setVisibility(ListView.GONE);
                                     allTrainsTextView.setText("Возни линии во текот на денот:");
+                                    allTrainsTextView.setVisibility(TextView.VISIBLE);
                                     SeeTrainsAdapter allAdapter = new SeeTrainsAdapter(getContext(), planList);
                                     allTrainsListView.setAdapter(allAdapter);
+                                    allTrainsListView.setVisibility(ListView.VISIBLE);
                                 } else {
                                     nextTrainsTextView.setText("Наредни возни линии:");
+                                    nextTrainsTextView.setVisibility(TextView.VISIBLE);
                                     SeeTrainsAdapter nextAdapter = new SeeTrainsAdapter(getContext(), nextTrainlist);
                                     nextTrainsListView.setAdapter(nextAdapter);
+                                    nextTrainsListView.setVisibility(ListView.VISIBLE);
                                     allTrainsTextView.setText("Возни линии во текот на денот:");
+                                    allTrainsTextView.setVisibility(TextView.VISIBLE);
                                     SeeTrainsAdapter allAdapter = new SeeTrainsAdapter(getContext(), planList);
                                     allTrainsListView.setAdapter(allAdapter);
+                                    allTrainsListView.setVisibility(ListView.VISIBLE);
                                 }
                             }
                         } else {
@@ -162,11 +170,14 @@ public class PlanTravelFragment extends Fragment {
                                 allTrainsTextView.setVisibility(TextView.GONE);
                                 if (nextTrainlist.isEmpty()) {
                                     nextTrainsTextView.setText("Нема наредни возни линии.");
+                                    nextTrainsTextView.setVisibility(TextView.VISIBLE);
                                     nextTrainsListView.setVisibility(ListView.GONE);
                                 } else {
                                     nextTrainsTextView.setText("Наредни возни линии:");
+                                    nextTrainsTextView.setVisibility(TextView.VISIBLE);
                                     SeeTrainsAdapter nextAdapter = new SeeTrainsAdapter(getContext(), nextTrainlist);
                                     nextTrainsListView.setAdapter(nextAdapter);
+                                    nextTrainsListView.setVisibility(ListView.VISIBLE);
                                 }
                             }
                             if (!nextTrains.isChecked() && allTrains.isChecked()) {
@@ -174,11 +185,14 @@ public class PlanTravelFragment extends Fragment {
                                 nextTrainsListView.setVisibility(ListView.GONE);
                                 if (planList.isEmpty()) {
                                     allTrainsTextView.setText("Нема возни линии.");
+                                    allTrainsTextView.setVisibility(TextView.VISIBLE);
                                     allTrainsListView.setVisibility(ListView.GONE);
                                 } else {
                                     allTrainsTextView.setText("Возни линии во текот на денот:");
+                                    allTrainsTextView.setVisibility(TextView.VISIBLE);
                                     SeeTrainsAdapter allAdapter = new SeeTrainsAdapter(getContext(), planList);
                                     allTrainsListView.setAdapter(allAdapter);
+                                    allTrainsListView.setVisibility(ListView.VISIBLE);
                                 }
                             }
                         }
@@ -201,7 +215,7 @@ public class PlanTravelFragment extends Fragment {
                                 }
                             }
                         }
-                        if(oneprice!=0) {
+                        if(!planList.isEmpty()) {
                             pricetext.setText("Цена: " + oneprice + ",00/" + twoprice + ",00 ден.");
                         }
                         if(nextTrainlist.size()==1) {
@@ -210,7 +224,6 @@ public class PlanTravelFragment extends Fragment {
                         secondLayout.setVisibility(RelativeLayout.VISIBLE);
                         footer.setVisibility(RelativeLayout.VISIBLE);
                     } else {
-                        //TODO: Make Toast to inform that neither checkbox is checked.
                         Toast.makeText(getActivity(), "Ве молиме селектирајте една од опциите",
                                 Toast.LENGTH_LONG).show();
                     }
